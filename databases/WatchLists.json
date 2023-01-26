@@ -1,1 +1,14 @@
-[{"_id":"63fc94dd-4eff-494c-8395-ea4e43bd6063","name":"vitalikWatchlist","tokens":["matic-network"]},{"_id":"b366bf0f-b58e-446f-95c4-30d276eba161","name":"vitalikWatchlist","tokens":["matic-network"]},{"_id":"8b85e989-13d6-4077-8c9e-ebe1b1b0f512","name":"vitalikWatchlist","tokens":["matic-network"]},{"_id":"a291c5a2-f4da-4c3e-b260-ad2975c61fef","name":"vitalikWatchlist","tokens":["matic-network"]}]
+[
+  { "_id": "1b3fe723-70fa-4678-96df-7dbf71231a71", "name": "sanjith", "tokens": [] },
+  { "_id": "c3451b9d-3ba3-46f1-b1fb-b7d2f1eb546a", "name": "jassify", "tokens": [] },
+  {
+    "_id": "8fd894fc-af7d-48f5-ae5f-388d9cc3f254",
+    "name": "3ncryptList",
+    "tokens": ["matic-network", "matic-dai-stablecoin"]
+  },
+  {
+    "_id": "a291c5a2-f4da-4c3e-b260-ad2975c61fef",
+    "name": "vitalikWatchlist",
+    "tokens": ["matic-network", "matic-dai-stablecoin"]
+  }
+]
