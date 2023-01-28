@@ -1,5 +1,5 @@
 import { HttpService } from '@nestjs/axios';
-import { BadRequestException, HttpException, Injectable } from '@nestjs/common';
+import {  HttpException, Injectable } from '@nestjs/common';
 import { catchError, firstValueFrom, map } from 'rxjs';
 import { DbService } from 'src/shared';
 
@@ -7,6 +7,7 @@ import { DbService } from 'src/shared';
 export class WatchlistService {
     constructor(private readonly httpService: HttpService,private readonly dbService:DbService) {}
 
+    
     async getCoinList() {
         const url = `https://api.coingecko.com/api/v3/coins/list`;
         
@@ -24,13 +25,9 @@ export class WatchlistService {
     }
 
     async createWatchlist(name: string) {
-        let regex = /^[a-zA-Z0-9]*$/;
-        if (name.length >= 5 && name.length <= 20 && name.match(regex)) {
-        const data = await this.dbService.create(name, []);
-        return data;
-        } else {
-        throw new BadRequestException('Watchlist name must be between 5 and 20 characters long')
-        }
+      const data = await this.dbService.create(name, []);
+      return data;
+        
     }
 
     async validateTokens(tokens: any){
