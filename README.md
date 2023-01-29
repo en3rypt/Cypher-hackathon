@@ -1,3 +1,28 @@
+## Installation
+
+```bash
+$ npm install
+```
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`COVALENT_API_KEY`
+
+## Running the app
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
 ## Backend Problem Statement
 
 [LINK](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend) to the problem statement.
@@ -180,38 +205,6 @@ Sample Output
 | ethereum | 1   |
 | polygon  | 137 |
 | fantom   | 250 |
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 ## License
 
