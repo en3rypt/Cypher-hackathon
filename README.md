@@ -1,30 +1,185 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+## Backend Problem Statement
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[LINK](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend) to the problem statement.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# CypherD - Backend
 
-## Description
+## [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#Prerequisites 'Prerequisites')Prerequisites
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- Understand Nestjs - a typescript based Backend MVC Framework [Module](https://docs.nestjs.com/modules) , [Controllers](https://docs.nestjs.com/controllers) , [Providers](https://docs.nestjs.com/providers) , [Validations](https://docs.nestjs.com/techniques/validation)
+- Understand [local-db](https://lenn.gitbook.io/db-local/) - A simple alternative to database with simple JSON.
+- Understand REST Architecture, HTTP Verbs and Response Codes
+
+### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#Points-to-Consider 'Points-to-Consider')Points to Consider:
+
+- API endpoints must follow REST Architectural Patterns and Guidelines (<https://www.codecademy.com/article/what-is-rest> )
+- Variable Names , Function Names, Class Names should be Meaningful.
+
+## [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#Problem-Statement-Create-a-RESTful-API 'Problem-Statement-Create-a-RESTful-API')Problem Statement: Create a RESTful API
+
+### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#1-An-Endpoint-to-Get-the-aggregate-token-balances-of-an-address-in-the-following-chains-Ethereum-Fantom-and-Polygon '1-An-Endpoint-to-Get-the-aggregate-token-balances-of-an-address-in-the-following-chains-Ethereum-Fantom-and-Polygon')1\. An Endpoint to Get the aggregate token balances of an address in the following chains: Ethereum, Fantom, and Polygon.
+
+- [ ] Integrate with CovalentHq - <https://api.covalenthq.com/v1/1/address/0x52114fb7396dbe19096ffa343d18830f5d77b6c6/balances_v2/?key=><your_api_key>
+
+Sample Input:
+
+```
+	 0x52114fb7396dbe19096ffa343d18830f5d77b6c6
+
+```
+
+Sample Output :
+
+```
+{
+	address: "0x52114fb7396dbe19096ffa343d18830f5d77b6c6",
+	balances: {
+		eth: [
+		{
+			name: '',
+			symbol:'',
+			decimals:'',
+			contractAddress:'',
+			contractDeicmals:'',
+			logo:'',
+			balance: xx,
+			balanceInUSD: xx,
+		}
+		],
+		polygon:[],
+		fantom:[],
+	},
+	totalBalanceInUSD: XXX
+}
+
+```
+
+### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#2-Watchlist-Management-Feature '2-Watchlist-Management-Feature')2\. Watchlist Management Feature
+
+#### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#21-An-Endpoint-to-Get-Master-Coin-list---Coingecko-Integration '21-An-Endpoint-to-Get-Master-Coin-list---Coingecko-Integration')2.1 An Endpoint to Get Master Coin list - Coingecko Integration
+
+- [ ] Integrate with following API to generate the master list of tokens <https://api.coingecko.com/api/v3/coins/list>
+- [ ] `id` field in the response should be used in upcoming APIs to track these coins through the watchlist
+
+Sample Output:
+
+```
+{
+	coins:
+	[
+		{
+			"id": "matic-network",
+			"symbol": "matic",
+			"name": "Polygon"
+		},
+
+	]
+}
+
+```
+
+#### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#22-An-Endpoint-to-Create-Watchlist-with-a-name '22-An-Endpoint-to-Create-Watchlist-with-a-name')2.2 An Endpoint to Create Watchlist with a name
+
+Validation : name should be alphanumeric with minimum of 5 characters and maximum of 20\
+Sample Input :
+
+```
+{
+	name: "vitalikWatchlist"
+}
+
+```
+
+Sample Output :
+
+```
+{
+	id: "24cf68e1-3ef1-403b-9851-44a90cb32816",
+	name: "vitalikWatchlist",
+	tokens: []
+}
+
+```
+
+#### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#23-Add-tokens-to-Watchlist '23-Add-tokens-to-Watchlist')2.3 Add tokens to Watchlist
+
+Validation :\
+- `tokensToBeAdded` list should be validated with Coingecko List with the `id` field.\
+
+- should ignore duplicates
+
+Sample Input :
+
+```
+{
+	tokensToBeAdded: [ "matic-network"]
+}
+
+```
+
+Sample Output:
+
+```
+{
+	id: "24cf68e1-3ef1-403b-9851-44a90cb32816",
+	name: "vitalikWatchlist",
+	tokens: ["matic-network"]
+}
+
+```
+
+#### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#24-Delete-tokens-from-Watchlist '24-Delete-tokens-from-Watchlist')2.4 Delete tokens from Watchlist
+
+Sample Input
+
+```
+{
+	tokensToBeDeleted: ["matic-network""]
+}
+
+```
+
+Sample Output
+
+```
+{
+	id: "24cf68e1-3ef1-403b-9851-44a90cb32816",
+	name: "vitalikWatchlist",
+	tokens: []
+}
+
+```
+
+#### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#25-An-Endpoint-to-Get-Watchlist-by-its-id '25-An-Endpoint-to-Get-Watchlist-by-its-id')2.5 An Endpoint to Get Watchlist by its id
+
+Sample Output
+
+```
+{
+	id: "24cf68e1-3ef1-403b-9851-44a90cb32816",
+	name: "vitalikWatchlist",
+	tokens: ["matic-network", "gravity-finance"]
+}
+
+```
+
+#### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#26-An-Endpoint-to-Delete-Watchlist-by-its-id '26-An-Endpoint-to-Delete-Watchlist-by-its-id')2.6 An Endpoint to Delete Watchlist by its id
+
+### [](https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#References- 'References-')References :
+
+<https://www.coingecko.com/en/api/documentation>
+
+<https://www.covalenthq.com/platform/#/auth/register/> - For Api key generation
+
+<https://www.covalenthq.com/docs/api> - CovalentHQ Docs
+
+<https://www.codecademy.com/article/what-is-rest>
+
+| chain    | id  |
+| -------- | --- |
+| ethereum | 1   |
+| polygon  | 137 |
+| fantom   | 250 |
 
 ## Installation
 
@@ -57,16 +212,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
