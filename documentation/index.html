@@ -31,31 +31,11 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-<h2 id="description">Description</h2>
-<p><a href="https://github.com/nestjs/nest">Nest</a> framework TypeScript starter repository.</p>
 <h2 id="installation">Installation</h2>
-<div><pre class="line-numbers"><code class="language-bash">$ npm install</code></pre></div><h2 id="running-the-app">Running the app</h2>
+<div><pre class="line-numbers"><code class="language-bash">$ npm install</code></pre></div><h2 id="environment-variables">Environment Variables</h2>
+<p>To run this project, you will need to add the following environment variables to your .env file</p>
+<p><code>COVALENT_API_KEY</code></p>
+<h2 id="running-the-app">Running the app</h2>
 <div><pre class="line-numbers"><code class="language-bash"># development
 $ npm run start
 
@@ -63,22 +43,138 @@ $ npm run start
 $ npm run start:dev
 
 # production mode
-$ npm run start:prod</code></pre></div><h2 id="test">Test</h2>
-<div><pre class="line-numbers"><code class="language-bash"># unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov</code></pre></div><h2 id="support">Support</h2>
-<p>Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you&#39;d like to join them, please <a href="https://docs.nestjs.com/support">read more here</a>.</p>
-<h2 id="stay-in-touch">Stay in touch</h2>
+$ npm run start:prod</code></pre></div><h2 id="backend-problem-statement">Backend Problem Statement</h2>
+<p><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend">LINK</a> to the problem statement.</p>
+<h1 id="cypherd---backend">CypherD - Backend</h1>
+<h2 id="prerequisites"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#Prerequisites" title="Prerequisites"></a>Prerequisites</h2>
 <ul>
-<li>Author - <a href="https://kamilmysliwiec.com">Kamil Myśliwiec</a></li>
-<li>Website - <a href="https://nestjs.com/">https://nestjs.com</a></li>
-<li>Twitter - <a href="https://twitter.com/nestframework">@nestframework</a></li>
+<li>Understand Nestjs - a typescript based Backend MVC Framework <a href="https://docs.nestjs.com/modules">Module</a> , <a href="https://docs.nestjs.com/controllers">Controllers</a> , <a href="https://docs.nestjs.com/providers">Providers</a> , <a href="https://docs.nestjs.com/techniques/validation">Validations</a></li>
+<li>Understand <a href="https://lenn.gitbook.io/db-local/">local-db</a> - A simple alternative to database with simple JSON.</li>
+<li>Understand REST Architecture, HTTP Verbs and Response Codes</li>
 </ul>
+<h3 id="points-to-consider"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#Points-to-Consider" title="Points-to-Consider"></a>Points to Consider:</h3>
+<ul>
+<li>API endpoints must follow REST Architectural Patterns and Guidelines (<a href="https://www.codecademy.com/article/what-is-rest">https://www.codecademy.com/article/what-is-rest</a> )</li>
+<li>Variable Names , Function Names, Class Names should be Meaningful.</li>
+</ul>
+<h2 id="problem-statement-create-a-restful-api"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#Problem-Statement-Create-a-RESTful-API" title="Problem-Statement-Create-a-RESTful-API"></a>Problem Statement: Create a RESTful API</h2>
+<h3 id="1-an-endpoint-to-get-the-aggregate-token-balances-of-an-address-in-the-following-chains-ethereum-fantom-and-polygon"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#1-An-Endpoint-to-Get-the-aggregate-token-balances-of-an-address-in-the-following-chains-Ethereum-Fantom-and-Polygon" title="1-An-Endpoint-to-Get-the-aggregate-token-balances-of-an-address-in-the-following-chains-Ethereum-Fantom-and-Polygon"></a>1. An Endpoint to Get the aggregate token balances of an address in the following chains: Ethereum, Fantom, and Polygon.</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Integrate with CovalentHq - <a href="https://api.covalenthq.com/v1/1/address/0x52114fb7396dbe19096ffa343d18830f5d77b6c6/balances_v2/?key=">https://api.covalenthq.com/v1/1/address/0x52114fb7396dbe19096ffa343d18830f5d77b6c6/balances_v2/?key=</a><your_api_key></li>
+</ul>
+<p>Sample Input:</p>
+<div><pre class="line-numbers"><code class="language-none">     0x52114fb7396dbe19096ffa343d18830f5d77b6c6
+</code></pre></div><p>Sample Output :</p>
+<div><pre class="line-numbers"><code class="language-none">{
+    address: &quot;0x52114fb7396dbe19096ffa343d18830f5d77b6c6&quot;,
+    balances: {
+        eth: [
+        {
+            name: &#39;&#39;,
+            symbol:&#39;&#39;,
+            decimals:&#39;&#39;,
+            contractAddress:&#39;&#39;,
+            contractDeicmals:&#39;&#39;,
+            logo:&#39;&#39;,
+            balance: xx,
+            balanceInUSD: xx,
+        }
+        ],
+        polygon:[],
+        fantom:[],
+    },
+    totalBalanceInUSD: XXX
+}
+</code></pre></div><h3 id="2-watchlist-management-feature"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#2-Watchlist-Management-Feature" title="2-Watchlist-Management-Feature"></a>2. Watchlist Management Feature</h3>
+<h4 id="21-an-endpoint-to-get-master-coin-list---coingecko-integration"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#21-An-Endpoint-to-Get-Master-Coin-list---Coingecko-Integration" title="21-An-Endpoint-to-Get-Master-Coin-list---Coingecko-Integration"></a>2.1 An Endpoint to Get Master Coin list - Coingecko Integration</h4>
+<ul>
+<li><input disabled="" type="checkbox"> Integrate with following API to generate the master list of tokens <a href="https://api.coingecko.com/api/v3/coins/list">https://api.coingecko.com/api/v3/coins/list</a></li>
+<li><input disabled="" type="checkbox"> <code>id</code> field in the response should be used in upcoming APIs to track these coins through the watchlist</li>
+</ul>
+<p>Sample Output:</p>
+<div><pre class="line-numbers"><code class="language-none">{
+    coins:
+    [
+        {
+            &quot;id&quot;: &quot;matic-network&quot;,
+            &quot;symbol&quot;: &quot;matic&quot;,
+            &quot;name&quot;: &quot;Polygon&quot;
+        },
+
+    ]
+}
+</code></pre></div><h4 id="22-an-endpoint-to-create-watchlist-with-a-name"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#22-An-Endpoint-to-Create-Watchlist-with-a-name" title="22-An-Endpoint-to-Create-Watchlist-with-a-name"></a>2.2 An Endpoint to Create Watchlist with a name</h4>
+<p>Validation : name should be alphanumeric with minimum of 5 characters and maximum of 20<br>Sample Input :</p>
+<div><pre class="line-numbers"><code class="language-none">{
+    name: &quot;vitalikWatchlist&quot;
+}
+</code></pre></div><p>Sample Output :</p>
+<div><pre class="line-numbers"><code class="language-none">{
+    id: &quot;24cf68e1-3ef1-403b-9851-44a90cb32816&quot;,
+    name: &quot;vitalikWatchlist&quot;,
+    tokens: []
+}
+</code></pre></div><h4 id="23-add-tokens-to-watchlist"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#23-Add-tokens-to-Watchlist" title="23-Add-tokens-to-Watchlist"></a>2.3 Add tokens to Watchlist</h4>
+<p>Validation :<br>- <code>tokensToBeAdded</code> list should be validated with Coingecko List with the <code>id</code> field.\</p>
+<ul>
+<li>should ignore duplicates</li>
+</ul>
+<p>Sample Input :</p>
+<div><pre class="line-numbers"><code class="language-none">{
+    tokensToBeAdded: [ &quot;matic-network&quot;]
+}
+</code></pre></div><p>Sample Output:</p>
+<div><pre class="line-numbers"><code class="language-none">{
+    id: &quot;24cf68e1-3ef1-403b-9851-44a90cb32816&quot;,
+    name: &quot;vitalikWatchlist&quot;,
+    tokens: [&quot;matic-network&quot;]
+}
+</code></pre></div><h4 id="24-delete-tokens-from-watchlist"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#24-Delete-tokens-from-Watchlist" title="24-Delete-tokens-from-Watchlist"></a>2.4 Delete tokens from Watchlist</h4>
+<p>Sample Input</p>
+<div><pre class="line-numbers"><code class="language-none">{
+    tokensToBeDeleted: [&quot;matic-network&quot;&quot;]
+}
+</code></pre></div><p>Sample Output</p>
+<div><pre class="line-numbers"><code class="language-none">{
+    id: &quot;24cf68e1-3ef1-403b-9851-44a90cb32816&quot;,
+    name: &quot;vitalikWatchlist&quot;,
+    tokens: []
+}
+</code></pre></div><h4 id="25-an-endpoint-to-get-watchlist-by-its-id"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#25-An-Endpoint-to-Get-Watchlist-by-its-id" title="25-An-Endpoint-to-Get-Watchlist-by-its-id"></a>2.5 An Endpoint to Get Watchlist by its id</h4>
+<p>Sample Output</p>
+<div><pre class="line-numbers"><code class="language-none">{
+    id: &quot;24cf68e1-3ef1-403b-9851-44a90cb32816&quot;,
+    name: &quot;vitalikWatchlist&quot;,
+    tokens: [&quot;matic-network&quot;, &quot;gravity-finance&quot;]
+}
+</code></pre></div><h4 id="26-an-endpoint-to-delete-watchlist-by-its-id"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#26-An-Endpoint-to-Delete-Watchlist-by-its-id" title="26-An-Endpoint-to-Delete-Watchlist-by-its-id"></a>2.6 An Endpoint to Delete Watchlist by its id</h4>
+<h3 id="references-"><a href="https://hackmd.io/@IUPUAByGTVS7Mpt2ekvx7A/cyd-backend#References-" title="References-"></a>References :</h3>
+<p><a href="https://www.coingecko.com/en/api/documentation">https://www.coingecko.com/en/api/documentation</a></p>
+<p><a href="https://www.covalenthq.com/platform/#/auth/register/">https://www.covalenthq.com/platform/#/auth/register/</a> - For Api key generation</p>
+<p><a href="https://www.covalenthq.com/docs/api">https://www.covalenthq.com/docs/api</a> - CovalentHQ Docs</p>
+<p><a href="https://www.codecademy.com/article/what-is-rest">https://www.codecademy.com/article/what-is-rest</a></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>chain</th>
+<th>id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ethereum</td>
+<td>1</td>
+</tr>
+<tr>
+<td>polygon</td>
+<td>137</td>
+</tr>
+<tr>
+<td>fantom</td>
+<td>250</td>
+</tr>
+</tbody>
+</table>
 <h2 id="license">License</h2>
 <p>Nest is <a href="LICENSE">MIT licensed</a>.</p>
 

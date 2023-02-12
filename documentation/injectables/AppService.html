@@ -100,45 +100,15 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(db: <a href="../injectables/DbService.html" target="_self">DbService</a>)</code>
+<code>constructor()</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/app.service.ts:5</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">src/app.service.ts:4</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>db</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/DbService.html" target="_self" >DbService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
             </tbody>
         </table>
 </section>
@@ -170,8 +140,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="7"
-                            class="link-to-prism">src/app.service.ts:7</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="6"
+                            class="link-to-prism">src/app.service.ts:6</a></div>
                 </td>
             </tr>
 
@@ -194,14 +164,13 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
-import { DbService } from &#x27;./shared&#x27;;
 
 @Injectable()
 export class AppService {
-  constructor(private readonly db: DbService) {}
+  constructor() {}
   async getHello(): Promise&lt;string&gt; {
-    const result &#x3D; await this.db.create(&#x27;vitalikWatchlist&#x27;, [&#x27;matic-network&#x27;]);
-    return &#x60;Hello Wold! ${JSON.stringify(result)}&#x60;;
+    // const result &#x3D; await this.db.create(&#x27;vitalikWatchlist&#x27;, [&#x27;matic-network&#x27;]);
+    return &#x60;Hello Wold!&#x60;;
   }
 }
 </code></pre>
