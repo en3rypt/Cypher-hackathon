@@ -3,8 +3,10 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   constructor() {}
-  async getHello(): Promise<string> {
+  async getHello(): Promise<any> {
     // const result = await this.db.create('vitalikWatchlist', ['matic-network']);
-    return `Hello Wold!`;
+    return {
+      message: 'Hello World!'
+    };
   }
 }
